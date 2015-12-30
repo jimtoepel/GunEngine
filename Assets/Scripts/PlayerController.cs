@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	public float speed = 6.0F;
+	public float speed = 5.0F;
 	private Vector3 moveDirection = Vector3.zero;
 
 	// Use this for initialization
@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate () {
 	
 		CharacterController controller = GetComponent<CharacterController> ();
-		moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
+//		double tempHoriz = -1.0 * Input.GetAxis ("Horizontal");
+		moveDirection = new Vector3 (-Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
 		moveDirection = transform.TransformDirection (moveDirection);
 		moveDirection *= speed;
 

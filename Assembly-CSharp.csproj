@@ -45,7 +45,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FX\Demo\DemoScript.cs" />
+     <Compile Include="Assets\FX\Prefab\Script\FireBaseScript.cs" />
+     <Compile Include="Assets\FX\Prefab\Script\FireCollisionForwardScript.cs" />
+     <Compile Include="Assets\FX\Prefab\Script\FireConstantBaseScript.cs" />
+     <Compile Include="Assets\FX\Prefab\Script\FireLightScript.cs" />
+     <Compile Include="Assets\FX\Prefab\Script\FireProjectileScript.cs" />
+     <Compile Include="Assets\FX\Prefab\Script\MeteorSwarmScript.cs" />
+     <Compile Include="Assets\FX\Prefab\Script\SingleLineAttribute.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <None Include="Assets\FX\Prefab\Materials\AdditiveTintable.shader" />
+     <None Include="Assets\FX\Readme.txt" />
+     <None Include="Assets\Textures\readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
