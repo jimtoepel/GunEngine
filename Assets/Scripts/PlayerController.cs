@@ -8,9 +8,9 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	    Debug.Log("Locking in Place");
-		go();
-		Debug.Log("Time to Dance");
+
+		StartCoroutine (Spawn());
+
 	}
 	
 	// Update is called once per frame
@@ -25,11 +25,19 @@ public class PlayerController : MonoBehaviour {
 		controller.Move (moveDirection * Time.deltaTime);
 	}
 
-	IEnumerator go() {
-			float originalSpeed = speed;
-			speed = 0;
-        	yield return new WaitForSeconds(5);
-			speed = originalSpeed;
+	IEnumerator Spawn() {
+		float originalSpeed = speed;
+		Debug.Log("Locking in Place");
+		speed = 0;
+        yield return new WaitForSeconds(5);
+		Debug.Log("Time to Dance");
+		speed = originalSpeed;
+	}
+
+	IEnumerator Dead() {
+		speed = 0;
+		Debug.Log("Oh noes!");
+		yield return new WaitForSeconds(5);
 	}
 
 }
